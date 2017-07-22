@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from "react-router-dom";
 
 import Chat from './components/chat';
 
@@ -33,12 +32,10 @@ class App extends Component {
     }
     render() {
         return (
-            <BrowserRouter>
-                <div>
-                    <h1>Example Chat</h1>
-                    <Chat channel='la' token={this.state.token}  username={this.state.user} />
-                </div>
-            </BrowserRouter>
+            <div>
+                <h1>Example Chat</h1>
+                <Chat channel='la' token={this.state.token}  username={this.state.user} />
+            </div>
         );
     }
 }
