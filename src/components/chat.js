@@ -1,5 +1,11 @@
 import React, {Component} from 'react';
 import {Route, NavLink} from 'react-router-dom';
+// var twilioChat = require("twilio-chat");
+// var twilioFrame = require("twilio-frame");
+
+// import * as Twilio from 'twilio-common';
+// import * as Chat from 'twilio-chat';
+// import * as Frame from 'twilio-frame';
 
 class ChatFrame extends Component {
 
@@ -19,7 +25,6 @@ class ChatFrame extends Component {
 
     loadTwiliochat() {
 
-
         // Our interface to the Chat service
         let chatClient;
 
@@ -38,11 +43,6 @@ class ChatFrame extends Component {
                 chatClient.getSubscribedChannels().then(createOrJoinGeneralChannel);
 
             });
-
-
-
-
-
 
         function createOrJoinGeneralChannel() {
             // Get the general chat channel, which is where all the messages are
@@ -84,8 +84,6 @@ class ChatFrame extends Component {
                 console.log('new messages sent', message.author, message.body);
             });
         }
-
-
 
         function loadFrame(client, channel) {
 
@@ -135,8 +133,6 @@ class ChatFrame extends Component {
 
 
     }
-
-
 
     render() {
         return (
